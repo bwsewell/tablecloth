@@ -1,3 +1,7 @@
+body {
+  background:#ECEBE0;
+}
+
 .table thead.header-dark th {
   background:#232323;
   color:#FFF;
@@ -15,3 +19,134 @@
 .table tr.highlight-warning td, .table tr.highlight-warning:hover td  { background:#faa732; color:#FFF; }
 .table tr.highlight-danger td,  .table tr.highlight-danger:hover td   { background:#da4f49; color:#FFF; }
 .table tr.highlight-inverse td, .table tr.highlight-inverse:hover td  { background:#414141; color:#FFF; }
+
+/* SIMPLE THEME */
+
+.table-simple {
+  border: 1px solid #ccc;
+  border: 1px solid rgba(0,0,0,0.1);
+  border-collapse: separate;
+  *border-collapse: collapsed;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  box-shadow:0 1px 2px rgba(0,0,0,0.15);
+}
+.table-simple thead th {
+  font-size:11px;
+  font-weight:normal;
+}
+.table-simple th,
+.table-simple td {
+  background:#FFF;
+  color:#666;
+  border-top: 1px solid #ccc;
+  border-top: 1px solid rgba(0,0,0,0.1);
+  padding:4px 5px;
+}
+.table-simple thead tr:hover th, .table-simple tbody tr:hover td {
+  background:#FFF;
+  color:#232323;
+}
+.table-simple thead:first-child tr:first-child th,
+.table-simple tbody:first-child tr:first-child th,
+.table-simple tbody:first-child tr:first-child td {
+  border-top: 0;
+}
+.table-simple thead:first-child tr:first-child th:first-child,
+.table-simple tbody:first-child tr:first-child td:first-child {
+  -webkit-border-radius: 3px 0 0 0;
+  -moz-border-radius: 3px 0 0 0;
+  border-radius: 3px 0 0 0;
+}
+.table-simple thead:first-child tr:first-child th:last-child,
+.table-simple tbody:first-child tr:first-child td:last-child {
+  -webkit-border-radius: 0 3px 0 0;
+  -moz-border-radius: 0 3px 0 0;
+  border-radius: 0 3px 0 0;
+}
+.table-simple thead:last-child tr:last-child th:first-child,
+.table-simple tbody:last-child tr:last-child td:first-child {
+  -webkit-border-radius: 0 0 0 3px;
+  -moz-border-radius: 0 0 0 3px;
+  border-radius: 0 0 0 3px;
+}
+.table-simple thead:last-child tr:last-child th:last-child,
+.table-simple tbody:last-child tr:last-child td:last-child {
+  -webkit-border-radius: 0 0 3px 0;
+  -moz-border-radius: 0 0 3px 0;
+  border-radius: 0 0 3px 0;
+}
+
+/* CLEAN THEME */
+
+.table-clean {
+  border: 1px solid #ccc;
+  border: 1px solid rgba(0,0,0,0.1);
+  border-collapse: separate;
+  *border-collapse: collapsed;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+.table-clean.table-bordered {
+  border-left: 0;
+}
+.table-clean thead th, .table-clean.table-bordered thead th {
+  background:#E5E4D5;
+}
+.table-clean th, .table-clean td {
+  background:#F2F2E9;
+  color:#705636;
+  border-top: 1px solid #FFF;
+  border-top: 1px solid rgba(255,255,255,0.85);
+  box-shadow:inset 0 -1px 0 #E0DDC9;
+  box-shadow:inset 0 -1px 0 rgba(0,0,0,0.10);
+}
+.table-clean.table-bordered th, .table-clean.table-bordered td {
+  background:#F2F2E9;
+  color:#705636;
+  border-top: 1px solid #FFF;
+  border-top: 1px solid rgba(255,255,255,0.85);
+  border-left: 1px solid #E0DDC9;
+  border-left: 1px solid rgba(0,0,0,0.10);
+  box-shadow:inset 0 -1px 0 #E0DDC9, 1px 0 0 #FFF;
+  box-shadow:inset 0 -1px 0 rgba(0,0,0,0.10), inset 1px 0 0 rgba(255,255,255,0.85);
+}
+.table-clean tbody tr:nth-child(odd) td,
+.table-clean tbody tr:nth-child(odd) th {
+  background-color: #EFEEE3;
+}
+.table-clean tbody tr:hover th, .table-clean tbody tr:hover td {
+  background:#F7F7F4;
+  color:#493419;
+}
+.table-clean thead:first-child tr:first-child th,
+.table-clean tbody:first-child tr:first-child th,
+.table-clean tbody:first-child tr:first-child td {
+  border-top: 0;
+}
+.table-clean thead:first-child tr:first-child th:first-child,
+.table-clean tbody:first-child tr:first-child td:first-child {
+  -webkit-border-radius: 5px 0 0 0;
+  -moz-border-radius: 5px 0 0 0;
+  border-radius: 5px 0 0 0;
+}
+.table-clean thead:first-child tr:first-child th:last-child,
+.table-clean tbody:first-child tr:first-child td:last-child {
+  -webkit-border-radius: 0 5px 0 0;
+  -moz-border-radius: 0 5px 0 0;
+  border-radius: 0 5px 0 0;
+}
+.table-clean thead:last-child tr:last-child th:first-child,
+.table-clean tbody:last-child tr:last-child td:first-child {
+  -webkit-border-radius: 0 0 0 5px;
+  -moz-border-radius: 0 0 0 5px;
+  border-radius: 0 0 0 5px;
+}
+.table-clean thead:last-child tr:last-child th:last-child,
+.table-clean tbody:last-child tr:last-child td:last-child {
+  -webkit-border-radius: 0 0 5px 0;
+  -moz-border-radius: 0 0 5px 0;
+  border-radius: 0 0 5px 0;
+}
