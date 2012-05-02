@@ -1,6 +1,9 @@
 // tablecloth.js
 // copyright brian sewell
 // https://github.com/bwsewell/tablecloth
+//
+// v0.0.1
+// May 2, 2012 09:29
 
 (function( $ ){
 	$.fn.tablecloth = function(options) {
@@ -12,9 +15,7 @@
 			condensed: false,
 			striped: false,
 			strip: false,
-			blacklist: ["style","class","cellpadding","cellspacing","border","bgcolor","align"],
-			sortable: false,
-			searchable: false
+			blacklist: ["style","class","cellpadding","cellspacing","border","bgcolor","align"]
 	  };
 	  	
 	 	var opts = $.extend(defaults, options);
