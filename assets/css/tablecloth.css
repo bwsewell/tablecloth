@@ -146,3 +146,94 @@
   -moz-border-radius: 0 0 5px 0;
   border-radius: 0 0 5px 0;
 }
+
+/* STATS THEME */
+
+.table-stats {
+  border: 1px solid #C2C2C2;
+  border-collapse: separate;
+  *border-collapse: collapsed;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0 !important;
+  font-family:verdana,helvetica,arial,sans-serif;
+  font-size:11px;
+  color:#333;
+}
+.table-stats.table-bordered {
+  border-left: 0;
+}
+.table-stats thead th {
+  font-size:13px;
+  font-weight:bold;
+  font-family:helvetica,arial,sans-serif;
+  background:#DDD;
+  background-image: linear-gradient(bottom, #E8E8E8 0%, #CECECE 100%);
+  background-image: -o-linear-gradient(bottom, #E8E8E8 0%, #CECECE 100%);
+  background-image: -moz-linear-gradient(bottom, #E8E8E8 0%, #CECECE 100%);
+  background-image: -webkit-linear-gradient(bottom, #E8E8E8 0%, #CECECE 100%);
+  background-image: -ms-linear-gradient(bottom, #E8E8E8 0%, #CECECE 100%);
+
+  background-image: -webkit-gradient(
+  	linear,
+  	left bottom,
+  	left top,
+  	color-stop(0, #E8E8E8),
+  	color-stop(1, #CECECE)
+  );
+  color:#666;
+  border-radius:0 !important;
+  padding:4px !important;
+}
+.table-stats thead:nth-child(1) th {
+  font-size:13px;
+  font-weight:bold;
+  font-family:helvetica,arial,sans-serif;
+  background:#4B4B4B;
+  background-image: linear-gradient(bottom, #565656 0%, #434343 100%);
+  background-image: -o-linear-gradient(bottom, #565656 0%, #434343 100%);
+  background-image: -moz-linear-gradient(bottom, #565656 0%, #434343 100%);
+  background-image: -webkit-linear-gradient(bottom, #565656 0%, #434343 100%);
+  background-image: -ms-linear-gradient(bottom, #565656 0%, #434343 100%);
+
+  background-image: -webkit-gradient(
+  	linear,
+  	left bottom,
+  	left top,
+  	color-stop(0, #565656),
+  	color-stop(1, #434343)
+  );
+  color:#FFF;
+  border-bottom:1px solid #FFF;
+  border-radius:0 !important;
+}
+.table-stats th,
+.table-stats td {
+  background:#FFF;
+  color:#666;
+  border-top: none;
+}
+.table-stats.table-bordered th, .table-stats.table-bordered td {
+  border-top: 1px solid #C2C2C2;
+  border-left: 1px solid #C2C2C2;
+}
+.table-stats.table-condensed th, .table-stats.table-condensed td {
+  padding:1px 4px;
+}
+.table-stats.table-striped tbody tr:nth-child(even) td,
+.table-stats.table-striped tbody tr:nth-child(even) th,
+.table-stats.table-striped tbody tr:nth-child(even):hover td,
+.table-stats.table-striped tbody tr:nth-child(even):hover th {
+  background-color: #F1F1F1;
+}
+.table-stats.table-striped tbody tr:nth-child(odd) td,
+.table-stats.table-striped tbody tr:nth-child(odd) th,
+.table-stats.table-striped tbody tr:nth-child(odd):hover td,
+.table-stats.table-striped tbody tr:nth-child(odd):hover th {
+  background-color: #FFF;
+}
+.table-stats thead:first-child tr:first-child th,
+.table-stats tbody:first-child tr:first-child th,
+.table-stats tbody:first-child tr:first-child td {
+  border-top: 0;
+}

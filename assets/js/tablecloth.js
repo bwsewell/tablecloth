@@ -2,8 +2,8 @@
 // copyright brian sewell
 // https://github.com/bwsewell/tablecloth
 //
-// v0.0.1
-// May 2, 2012 09:29
+// v0.0.3
+// May 2, 2012 14:05
 
 (function( $ ){
 	$.fn.tablecloth = function(options) {
@@ -14,25 +14,33 @@
 			bordered: false,
 			condensed: false,
 			striped: false,
-			strip: false,
-			blacklist: ["style","class","cellpadding","cellspacing","border","bgcolor","align"]
+			sortable: false,
+			searchable: false,
+			clean: false,
+			cleanElements: "thead,tbody,tr,th,td"
 	  };
-	  	
+	  
 	 	var opts = $.extend(defaults, options);
-	 	
+
 	 	// Get rid of all inline styling and css classes for all table attributes
-	 	if (opts.strip) {
+	 	if (opts.clean) {
 	 	  
-	 	  for each (var b in opts.blacklist) {
-	 	    this.attr(b,"")
-          .removeAttr(b);
-	 	  }
+	 	  this.removeAttr('style')
+	 	    .removeAttr('class')
+	 	    .removeAttr('cellpadding')
+	 	    .removeAttr('cellspacing')
+	 	    .removeAttr('bgcolor')
+	 	    .removeAttr('align')
+	 	    .removeAttr('width');
  	      
-	 	  this.find("*").each(function() {
-	 	    for each (var b in opts.blacklist) {
-  	 	    $(this).attr(b,"")
-            .removeAttr(b);
-  	 	  }
+	 	  this.find(opts.cleanElements).each(function() {
+	 	    $(this).removeAttr('style')
+	 	      .removeAttr('class')
+  	 	    .removeAttr('cellpadding')
+  	 	    .removeAttr('cellspacing')
+  	 	    .removeAttr('bgcolor')
+  	 	    .removeAttr('align')
+  	 	    .removeAttr('width');
 	 	  });
 	 	  
 	 	}
@@ -46,6 +54,9 @@
 	 	}
 	 	else if (opts.theme == "simple") {
 	 	  this.addClass("table table-simple");
+	 	}
+	 	else if (opts.theme == "stats") {
+	 	  this.addClass("table table-stats");
 	 	}
 	 	
 	 	// Set the table theme accordingly
