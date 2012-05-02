@@ -1,0 +1,68 @@
+<!DOCTYPE html>  
+<html lang="en">  
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tablecloth.js demo</title>
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="assets/css/tablecloth.css" rel="stylesheet">
+    <link href="assets/css/tablecloth-responsive.css" rel="stylesheet"> 
+    <link href="assets/css/prettify.css" rel="stylesheet"> 
+  </head>
+  
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="span12" style="padding:20px 0;">
+        
+          <table cellpadding="2" cellspacing="3" border="3">
+            <thead>
+              <tr>
+                <th>Heading</th>
+                <th>Heading</th>
+                <th>Heading</th>
+                <th>Heading</th>
+                <th>Heading</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Cell</td>
+                <td>Cell</td>
+                <td>Cell</td>
+                <td>Cell</td>
+                <td>Cell</td>
+              </tr>
+              <tr>
+                <td>Cell</td>
+                <td colspan="2" style="font-size:36px;">Cell</td>
+                <td>Cell</td>
+                <td>Cell</td>
+              </tr>
+              <tr>
+                <td>Cell</td>
+                <td>Cell</td>
+                <td>Cell</td>
+                <td>Cell</td>
+                <td>Cell</td>
+              </tr>
+            </tbody>
+          </table>
+          
+        </div>
+      </div>
+    </div>
+  
+    <script src="assets/js/jquery-1.7.2.min.js"></script>
+    <script src="assets/js/bootstrap.js"></script>
+    <script src="assets/js/tablecloth.js"></script>
+    
+    <script type="text/javascript" charset="utf-8">
+      $(document).ready(function() {
+        $("table").tablecloth({bordered:true, striped: true, condensed: true, strip: true});
+      });
+    </script>
+  </body>
+
+</html>
