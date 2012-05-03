@@ -2,45 +2,57 @@
 // copyright brian sewell
 // https://github.com/bwsewell/tablecloth
 //
-// v0.0.3
-// May 2, 2012 14:05
+// v0.0.4
+// May 3, 2012 12:00
 
 (function( $ ){
 	$.fn.tablecloth = function(options) {
 	  
     var defaults = { 
-			theme: "default", // "none","default","clean","simple"
+			theme: "default", // "none","default","stats"
 			customClass: "",
 			bordered: false,
 			condensed: false,
 			striped: false,
 			sortable: false,
-			searchable: false,
 			clean: false,
-			cleanElements: "thead,tbody,tr,th,td"
+			cleanElements: "*"
 	  };
 	  
 	 	var opts = $.extend(defaults, options);
 
-	 	// Get rid of all inline styling and css classes for all table attributes
+    // Before we remove any attributes, let's fix a few things up
+    this.find("*").each(function() {
+      if ($(this).attr("align") == "right") {
+        $(this).addClass("right");
+      }
+      if ($(this).attr("align") == "center") {
+        $(this).addClass("center");
+      }
+      if ($(this).attr("nowrap")) {
+        $(this).css('white-space','nowrap');
+      }
+    });
+
+	 	// Get rid of all inline styling and deprecated table attributes
 	 	if (opts.clean) {
 	 	  
 	 	  this.removeAttr('style')
-	 	    .removeAttr('class')
 	 	    .removeAttr('cellpadding')
 	 	    .removeAttr('cellspacing')
 	 	    .removeAttr('bgcolor')
 	 	    .removeAttr('align')
-	 	    .removeAttr('width');
+	 	    .removeAttr('width')
+	 	    .removeAttr('nowrap');
  	      
 	 	  this.find(opts.cleanElements).each(function() {
 	 	    $(this).removeAttr('style')
-	 	      .removeAttr('class')
   	 	    .removeAttr('cellpadding')
   	 	    .removeAttr('cellspacing')
   	 	    .removeAttr('bgcolor')
   	 	    .removeAttr('align')
-  	 	    .removeAttr('width');
+  	 	    .removeAttr('width')
+  	 	    .removeAttr('nowrap');
 	 	  });
 	 	  
 	 	}
@@ -48,12 +60,6 @@
 	 	// Set the table theme accordingly
 	 	if (opts.theme == "default") {
 	 	  this.addClass("table");
-	 	}
-	 	else if (opts.theme == "clean") {
-	 	  this.addClass("table table-clean");
-	 	}
-	 	else if (opts.theme == "simple") {
-	 	  this.addClass("table table-simple");
 	 	}
 	 	else if (opts.theme == "stats") {
 	 	  this.addClass("table table-stats");
@@ -74,11 +80,14 @@
 	 	if (opts.striped) {
 	 	  this.addClass("table-striped");
 	 	}
-	 	if (opts.sortable) {
+    if (opts.sortable) {
 	 	  this.addClass("table-sortable");
-	 	}
-	 	if (opts.searchable) {
-	 	  this.addClass("table-searchable");
+	 	  if (jQuery().tablesorter) {
+	 	    this.tablesorter({cssHeader: "headerSortable"});
+	 	  }
+	 	  else {
+	 	    console.log('Tablesorter is not loaded');
+	 	  }
 	 	}
 	 	
   };
