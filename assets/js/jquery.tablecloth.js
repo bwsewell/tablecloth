@@ -2,8 +2,8 @@
 // copyright brian sewell
 // https://github.com/bwsewell/tablecloth
 //
-// v0.0.4
-// May 3, 2012 12:00
+// v1.0.0
+// May 4, 2012 14:20
 
 (function( $ ){
 	$.fn.tablecloth = function(options) {
