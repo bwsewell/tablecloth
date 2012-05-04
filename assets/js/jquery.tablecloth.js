@@ -35,9 +35,11 @@
     });
 
 	 	// Get rid of all inline styling and deprecated table attributes
+	 	// Also get rid of any current classes being applied to the <table> element
 	 	if (opts.clean) {
 	 	  
-	 	  this.removeAttr('style')
+	 	  this.removeAttr('class')
+	 	    .removeAttr('style')
 	 	    .removeAttr('cellpadding')
 	 	    .removeAttr('cellspacing')
 	 	    .removeAttr('bgcolor')
@@ -61,8 +63,14 @@
 	 	if (opts.theme == "default") {
 	 	  this.addClass("table");
 	 	}
+	 	else if (opts.theme == "dark") {
+	 	  this.addClass("table table-dark");
+	 	}
 	 	else if (opts.theme == "stats") {
 	 	  this.addClass("table table-stats");
+	 	}
+	 	else if (opts.theme == "paper") {
+	 	  this.addClass("table table-paper");
 	 	}
 	 	
 	 	// Set the table theme accordingly
