@@ -106,7 +106,7 @@
 .table-dark.table-bordered thead:first-child tr:first-child th,
 .table-dark.table-bordered tbody:first-child tr:first-child th,
 .table-dark.table-bordered tbody:first-child tr:first-child td {
-.table-dark  border-top: 0;
+  border-top: 0;
 }
 .table-dark.table-bordered thead:first-child tr:first-child th:first-child,
 .table-dark.table-bordered tbody:first-child tr:first-child td:first-child {
