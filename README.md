@@ -21,3 +21,7 @@ $("table").tablecloth({
 ```
 
 tablecloth builds off the [Twitter Bootstrap](http://twitter.github.com/bootstrap/). It also includes popular jQuery table manipulation plugins like [tablesorter](http://tablesorter.com/docs/).
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/bwsewell/tablecloth/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
